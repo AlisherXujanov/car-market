@@ -1,5 +1,45 @@
+@use "./assets/styles/settings" as *;
+@use "./assets/styles/mixins" as *;
+@use "sass:color";
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+%btn-base {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+.btn {
+    @extend %btn-base;
+
+    &.btn-success {
+        background-color: $success;
+        color: white;
+
+        &:hover {
+            background-color: color.adjust($success, $lightness: -10%);
+        }
+    }
+
+    &.btn-info {
+        background-color: $info;
+        color: white;
+
+        &:hover {
+            background-color: color.adjust($info, $lightness: -10%);
+        }
+    }
 }

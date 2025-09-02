@@ -17,6 +17,7 @@ import AboutImage from "../assets/images/about-img.png";
 // --- --- Test
 // --- --- --- index.jsx    => import Heading from "../Heading"
 // --- --- --- style.scss
+// ---------------------------------------------------------------------
 
 function About() {
     return (
@@ -40,7 +41,7 @@ function About() {
                     height={350}
                 ></iframe> */}
             </div>
-
+            <Link className="btn btn-info" href="/">Home</Link>
         </div>
     );
 }
