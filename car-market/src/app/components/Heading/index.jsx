@@ -14,17 +14,14 @@ import { useState } from 'react'
 // 3. [useState]  =>  const [var, setVar] = useState(initialValue)
 
 const Heading = ({ color, children }) => { // destructuring
-    const [currentColor, setCurrentColor] = useState("red")
     // props  =>  properties  =>  это объект
     // props === { title: 'About page' }
-    function updateColor(e) {
-        setCurrentColor(e.target.value)
-    }
     return (
-        <h1 id="main-heading" style={{ color: currentColor }}>
-            {children}
-            <input type="color" onChange={updateColor} value={currentColor}/>
-        </h1>
+        <div className="container">
+            <h1 id="main-heading" style={{ color: color }}>
+                {children}
+            </h1>
+        </div>
     );
 }
 
