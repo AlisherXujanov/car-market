@@ -1,31 +1,37 @@
 "use client"
 
 import "./style.scss";
-import { useState } from 'react'
+import Image from "next/image"
+import HeadingVector from "../../assets/vectors/heading.png"
 
-// HOOK  =>  is special ability that every component can use
-// 
-// useState  =>  [use=использовать,  state=состояние-память]
-// each useState is unique for each component
+const Heading = ({ children, size = "h1", gray = false }) => { // destructuring
+    let headingSize = 0
+    switch (size.toLowerCase()) {
+        case "h1":
+            headingSize = 32
+            break
+        case "h2":
+            headingSize = 24
+            break
+        case "h3":
+            headingSize = 20
+            break
+        case "h4":
+            headingSize = 18
+            break
+        case "h5":
+            headingSize = 16
+            break
+        case "h6":
+            headingSize = 14
+            break
+    }
 
-// RULES:
-// 1. Always import it from 'react' inside {...}
-// 2. They should be initialized inside the component in top level
-// 3. [useState]  =>  const [var, setVar] = useState(initialValue)
-
-const Heading = ({ color, children }) => { // destructuring
-    // props  =>  properties  =>  это объект
-    // props === { title: 'About page' }
     return (
-        <div className="container">
-            <h1 id="main-heading" style={{ color: color }}>
-                {children}
-            </h1>
-        </div>
+        <h1 className="custom-heading" style={{ fontSize: headingSize + "px" }}>
+            <Image src={HeadingVector} alt="Heading vector" />
+            {children}
+        </h1>
     );
 }
-
-// export const x = ({ a, b }) => {
-//     return a + b
-// }
 export default Heading;
