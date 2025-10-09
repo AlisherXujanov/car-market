@@ -1,0 +1,39 @@
+@use "../../assets/styles/settings" as *;
+@use "../../assets/styles/mixins" as *;
+
+.carousel {
+    .slider-wrapper {
+        .slider {
+            position: relative;
+
+            img {
+                filter: grayscale(100%);
+                opacity: 0.3;
+                object-fit: cover;
+                object-position: top;
+            }
+
+            .carousel-inner {
+                width: 500px;
+                position: absolute;
+                z-index: 2;
+                top: 20%;
+                left: 5%;
+                text-align: left;
+
+                h1,
+                p {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .control-dots {
+        .dot {
+            background-color: $accent;
+            transform: scale(1.5);
+            box-shadow: 0 0 20px 0 $accent;
+        }
+    }
+}
