@@ -1,0 +1,29 @@
+.about-section-wrapper {
+    padding: 50px 300px;
+
+    .about-section-content {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+
+        .left {
+            img {
+                filter: grayscale(100%);
+            }
+        }
+
+        .right {
+            p {
+                color: lightgray;
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+}

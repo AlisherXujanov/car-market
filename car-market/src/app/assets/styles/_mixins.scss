@@ -5,3 +5,13 @@
     flex-direction: $direction;
     gap: $gap;
 }
+
+@mixin grid($columns: 12, $gap: 20px) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: $gap;
+}
+
+// USAGE:
+// @include grid();
+// @include grid(3, 10px);

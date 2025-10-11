@@ -1,0 +1,36 @@
+.our-value-wrapper {
+    padding: 50px 300px;
+
+    .value-items-wrapper {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+    }
+
+    .value-item-wrapper {
+        display: flex;
+
+        .item-left-side {
+            img {
+                position: relative;
+                top: -40px;
+            }
+        }
+
+        .item-right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: lightgray;
+            }
+        }
+    }
+}
